@@ -55,6 +55,7 @@ part 3 项目挖掘
 loading状态
 消息提示 成功失败
 并发场景 重复点击：防抖节流 请求去重：request key 拦截器取消、监控 AbortController
+
 part 4 行为场景题
 1.为什么要加入本公司
 1）认同公司的价值观
@@ -63,3 +64,32 @@ part 4 行为场景题
 2.对量化指标有疑问
 技术类指标：通过lighthouse AB测试 埋点 监控看板
 非技术类：主观评估
+
+part 5 简历组成
+1.基础信息
+姓名 岗位 出生日期 地点：（入职地点） 电话 邮箱 github地址 教育 兴趣爱好：（skills下方）（运动类）健身羽毛球 
+github美化 保持绿点 readme 每天star十个 fork5个以上 新增关注 react18项目
+2.核心优势
+1）<b>三维可视化与gis经验：</b>具备web端三维可视化与gis开发经验，熟悉threejs、cesium、mapbox、C#，参与智慧建筑园区管理等项目，完成模型加载、标注的交互以及业务数据联动等开发
+2）组件化与业务的复用：在中台类项目中具备组件的抽象与复用的实践，围绕表单、弹窗、上传列表等进行一定的封装，减少重复开发，提升页面开发效率，具备一定的工程规范意识
+3）跨领域的技术融合背景：本科和硕士阶段具有测绘背景，同时兼具空间信息理解能力和前端的实现能力，能够快速理解地图、三维、建筑空间等具体业务场景
+3.技能
+ 语言: JavaScript (ES6+), TypeScript, Python, C, Node.js, R, C++,C#
+ 框架: React.js, Vue.js（Vuex）, Next.js,  React Native，Express.js
+ UI可视化：Tailwind CSS、Element Plus(vue)、ECharts、AntvG6
+ 数据库: SQL Server
+ 云部署: 阿里云, Vercel
+ CI/CD:Git; npm/Yarn, Vite, Webpack, Babel; ESLint/Prettier;GitHub Actions
+ 单元测试: Vitest/Jest
+4.工作经历
+STAR法则：Situation（背景）、Task（任务）、Action（行动）、Result（项目收获）
+5.志愿工作
+志愿活动 事情 时间
+组织经历
+
+简历布局
+页数：2~3
+标题 正文 字体格式
+板块间距 中英文之间空一格
+技术名词的拼写正确
+加粗内容
