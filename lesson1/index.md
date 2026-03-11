@@ -67,15 +67,16 @@ part 4 行为场景题
 
 part 5 简历组成
 1.基础信息
-姓名 岗位 出生日期 地点：（入职地点） 电话 邮箱 github地址 教育 兴趣爱好：（skills下方）（运动类）健身羽毛球 
+姓名 岗位 出
+生日期 地点：（入职地点） 电话 邮箱 github地址 教育 兴趣爱好：（skills下方）（运动类）健身羽毛球 
 github美化 保持绿点 readme 每天star十个 fork5个以上 新增关注 react18项目
 2.核心优势
 1）<b>三维可视化与gis经验：</b>具备web端三维可视化与gis开发经验，熟悉threejs、cesium、mapbox、C#，参与智慧建筑园区管理等项目，完成模型加载、标注的交互以及业务数据联动等开发
 2）组件化与业务的复用：在中台类项目中具备组件的抽象与复用的实践，围绕表单、弹窗、上传列表等进行一定的封装，减少重复开发，提升页面开发效率，具备一定的工程规范意识
 3）跨领域的技术融合背景：本科和硕士阶段具有测绘背景，同时兼具空间信息理解能力和前端的实现能力，能够快速理解地图、三维、建筑空间等具体业务场景
 3.技能
- 语言: JavaScript (ES6+), TypeScript, Python, C, Node.js, R, C++,C#
- 框架: React.js, Vue.js（Vuex）, Next.js,  React Native，Express.js
+ 语言: JavaScript,TypeScript,Python,C,Node.js,R,C++,C#
+ 框架: React.js,Vue.js,Next.js,React Native，Express.js,Three.js,Cesium,Mapbox
  UI可视化：Tailwind CSS、Element Plus(vue)、ECharts、AntvG6
  数据库: SQL Server
  云部署: 阿里云, Vercel
@@ -93,3 +94,7 @@ STAR法则：Situation（背景）、Task（任务）、Action（行动）、Res
 板块间距 中英文之间空一格
 技术名词的拼写正确
 加粗内容
+
+八股：
+先讲概念核心定义
+在Call Stack执行同步代码，宏任务先，微任务后，渲染更新，拉宏任务执行
