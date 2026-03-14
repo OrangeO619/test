@@ -44,7 +44,7 @@ async1 end
 promise2
 setTimeout */
 
-async function async1() {
+/* async function async1() {
   console.log("async1 start");
   await async2();
   await async3();
@@ -74,7 +74,7 @@ new Promise(function (resolve) {
   console.log("promise2");
 });
 
-console.log("script end");
+console.log("script end"); */
 
 /* script start
 async1 start
@@ -85,3 +85,49 @@ async3
 promise2
 setTimeout
 async1 end */
+
+/* const p = new Promise((resolve, reject) => {
+  console.log(1);
+  setTimeout(() => {
+    console.log(2);
+    resolve();
+    console.log(5);
+  }, 1000);
+});
+
+p.then(() => console.log(3));
+
+console.log(4); */
+
+/* 1
+4
+3
+2
+5
+正确答案：
+1
+4
+2
+5
+3 */
+
+console.log("S");
+
+setTimeout(() => {
+  console.log("T1");
+  Promise.resolve().then(() => console.log("m-in-T1"));
+}, 0);
+
+Promise.resolve().then(() => {
+  console.log("m1");
+  queueMicrotask(() => console.log("m2"));
+});
+
+setTimeout(() => console.log("T2"), 0);
+
+console.log("E");
+
+queueMicrotask
+requestIdleCallback
+MutationObserver 
+Intersection observer
