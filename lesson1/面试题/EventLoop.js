@@ -1,4 +1,5 @@
-/* async function async1() {
+ //微任务、宏任务放入队列中，先进先出
+ async function async1() {
   console.log("async1 start");
   await async2();
   console.log("async1 end"); // await 后面的代码会放到微任务队列中（异步任务）
@@ -24,7 +25,7 @@ new Promise(function (resolve) {
 });
 
 console.log("script end");
- */
+
 /* script start
 async1 start
 async2
@@ -126,8 +127,19 @@ Promise.resolve().then(() => {
 setTimeout(() => console.log("T2"), 0);
 
 console.log("E");
+/* 
+S
+E
+m1
+m2
+T1
+m-in-T1
+T2
+*/
 
-queueMicrotask
-requestIdleCallback
-MutationObserver 
-Intersection observer
+/* 
+queueMicrotask:用于将任务添加到微任务队列的API，比Promise.then更直接的方式创建微任务。
+requestIdleCallback:在浏览器空闲时段执行低优先级任务的API，避免影响关键渲染和交互。
+MutationObserver:监听DOM树变化的API，当元素属性、子节点、文本内容发生变化时触发回调。
+IntersectionObserver: 异步观察目标元素与祖先元素或视口交叉状态的API，即监听元素是否可见。
+*/
