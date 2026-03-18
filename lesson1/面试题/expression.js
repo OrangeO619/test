@@ -1,4 +1,4 @@
-async function async2() {
+/* async function async2() {
   console.log("async2");
 }
 console.log(async2())
@@ -7,7 +7,7 @@ console.log(async2())
 function add(){
     return 1
 }
-console.log(add())
+console.log(add()) */
 
 /* 函数调用没有return，返回值是undefined */
 
@@ -17,9 +17,11 @@ console.log(add())
 2）作用域
 var作用域：全局、函数
 let/const:块级作用域、函数作用域、模块作用域
-3）重复声明
+3）重复声明 重新赋值
 var可以重复声明，let/const不可以 */
-
+const obj = {n:1}
+obj.n = 2
+console.log(obj)
 /* var shadowing = 'hello'
 function shadowingFn() {
 console.log('variable shadowing:',shadowing);
@@ -27,12 +29,12 @@ var shadowing = 'world'
 }
 shadowingFn();
  */
-var shadowing = 'hello'
+/* var shadowing = 'hello'
 function shadowingFn() {
 console.log('variable shadowing:',shadowing);//通过作用域链向外查找
 }
 shadowingFn();
-
+hello
 
 var shadowing = 'hello'
 function shadowingFn() {
@@ -48,4 +50,10 @@ console.log('variable shadowing:',shadowing);
 let shadowing = 'world'
 }
 shadowingFn();
-error
+error */
+
+for (var i=0; i<3; i++) {
+  /* setTimeout(()=>console.log(i)) */
+  console.log(i)
+}
+/* setTimeout的回调函数形成了一个闭包 */
