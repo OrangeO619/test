@@ -22,6 +22,15 @@ var可以重复声明，let/const不可以 */
 const obj = {n:1}
 obj.n = 2
 console.log(obj)
+//让obj.n = 2 被禁止
+const obj = {n:1};
+Object.defineProperty(obj, 'n', {
+  value: 1,
+  writable: false
+});
+
+obj.n = 2;  // 无效
+console.log(obj);
 /* var shadowing = 'hello'
 function shadowingFn() {
 console.log('variable shadowing:',shadowing);
@@ -52,8 +61,9 @@ let shadowing = 'world'
 shadowingFn();
 error */
 
-for (var i=0; i<3; i++) {
-  /* setTimeout(()=>console.log(i)) */
+/* for (var i=0; i<3; i++) {
+  setTimeout(()=>console.log(i))
   console.log(i)
 }
 /* setTimeout的回调函数形成了一个闭包 */
+
