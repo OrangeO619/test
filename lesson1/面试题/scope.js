@@ -84,3 +84,20 @@ function curriedAdd(a) {
   };
 }
 console.log(curriedAdd(1)(2)(3));  // 6
+
+
+//偏函数：产生函数的父函数
+//固定部分参数，返回一个接收剩余参数的新函数
+/* function partialFun(fn,...preset){
+    return function(...rest){
+      return fn(...preset, ...rest)
+    }
+  } */
+const partialFun =
+  (fn, ...preset) =>
+  (...rest) =>
+    fn(...preset, ...rest);
+const addFun = partialFun((a,b)=>a+b,3)
+console.log(addFun(5))
+baseUrl:preset
+fetchFun:baseUrl
