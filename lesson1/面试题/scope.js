@@ -99,5 +99,24 @@ const partialFun =
     fn(...preset, ...rest);
 const addFun = partialFun((a,b)=>a+b,3)
 console.log(addFun(5))
-baseUrl:preset
-fetchFun:baseUrl
+
+// 基础请求函数
+function request(baseURL, method, path, data) {
+  const fullURL = `${baseURL}${path}`;
+  const options = {
+    method,
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  };
+  if (data && method !== 'GET') {
+    options.body = JSON.stringify(data);
+  }
+  return fetch(fullURL, options).then(res => res.json());
+}
+
+// baseURL:preset
+const apiFun = partial(request, 'https://api.example.com');
+
+apiFun('GET', '/users', null).then(data => console.log(data));
+apiFun('POST', '/users', { name: '张三' }).then(data => console.log(data));
