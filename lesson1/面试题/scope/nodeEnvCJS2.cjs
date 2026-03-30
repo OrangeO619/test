@@ -1,8 +1,8 @@
-/* const module1 = require('./nodeEnvCJS1.cjs')
+const module1 = require('./nodeEnvCJS1.cjs')
 console.log(module1.a)
 module1.fn()
 module1.add()// 修改的是模块内部的 a，不是导出的副本
-console.log(module1.a) */
+console.log(module1.a)
 
 /* 
 特性	       CommonJS	               ES Module
@@ -15,8 +15,8 @@ console.log(module1.a) */
 异步加载	    同步	                异步（支持顶层 await）
 */
 
-const user1 = require('./nodeEnvCJS1.cjs');  // 输出：用户模块加载了（只执行一次）
+/* const user1 = require('./nodeEnvCJS1.cjs');  // 输出：用户模块加载了（只执行一次）
 const user2 = require('./nodeEnvCJS1.cjs');  // 从缓存读取，不输出
 
 user1.addUser({ name: '张三' });
-console.log(user2.getUsers());   
+console.log(user2.getUsers());    */

@@ -13,9 +13,14 @@ export  123; ❌
 //CJS模块系统 处理.cjs 浏览器不支持,"type": "commonjs"
 //ESM模块系统 处理.mjs 浏览器支持,"type": "module",
 //.js 由 package.json 的 "type" 决定
-let a = 1
+/* let a = 1
 const fn = ()=>{ console.log('hello')}
 export default {a,fn}
-export {a,fn}
+export {a,fn} */
+
+let config 
+let modulePath= (ENV === "production")? "./A.js" : "./B.js"
+const module = await import(modulePath)
+config = module.default
 
 

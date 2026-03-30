@@ -1,4 +1,4 @@
-/* let a = 1
+let a = 1
 function fn(){
     console.log('hello')
 }
@@ -6,9 +6,9 @@ function add(){
     ++a
 }
 
-module.exports = { a, fn, add }; */
+module.exports = { a, fn, add };
 
-console.log('用户模块加载了');
+/* console.log('用户模块加载了');
 
 let users = [];
 
@@ -20,5 +20,5 @@ function getUsers() {
   return users;
 }
 
-module.exports = { addUser, getUsers };
+module.exports = { addUser, getUsers }; */
 
