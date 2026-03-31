@@ -21,6 +21,15 @@ export {a,fn} */
 let config 
 let modulePath= (ENV === "production")? "./A.js" : "./B.js"
 const module = await import(modulePath)
-config = module.default
+config = module.default //module.default 是module的一个属性值
+
+/* 
+CJS写法：
+try {
+  config = require(modulePath);
+} catch (error) {
+  console.error('模块加载失败:', error);
+}
+*/
 
 
