@@ -18,11 +18,11 @@ const fn = ()=>{ console.log('hello')}
 export default {a,fn}
 export {a,fn} */
 
-let config 
+/* let config 
 let modulePath= (ENV === "production")? "./A.js" : "./B.js"
 const module = await import(modulePath)
 config = module.default //module.default 是module的一个属性值
-
+ */
 /* 
 CJS写法：
 try {
@@ -31,5 +31,9 @@ try {
   console.error('模块加载失败:', error);
 }
 */
-
-
+/* export const a=1
+const b=1
+export default b */
+let count = 0
+export default count
+export const addFun=()=>count++
