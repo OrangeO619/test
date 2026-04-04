@@ -28,5 +28,5 @@ const getCount = ()=> count
 module.exports = {count,addFun,getCount}
 module.exports = {count,addFun,getCount}
 
-1.笔试
-2.了解：活绑定、静动态导入导出、闭包
+/* 1.笔试
+2.了解：活绑定、静动态导入导出、闭包 */
