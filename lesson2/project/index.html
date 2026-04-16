@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login-form</title>
+    <style>
+        .login {
+            width: 200px;
+            padding: 10px;
+        }
+
+        .form-main {
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .form-main input {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .loginBtn {
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .form-footer {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login">
+        <h2>用户登录</h2>
+        <form class="loginForm" id="login-form" style="width: 100%;"  method="get">
+            <div class="form-main">
+                <input type="text" class="username" placeholder="用户名" name="username">
+            </div>
+            <div class="form-main">
+                <input type="password" class="password" placeholder="密码" name="pwd">
+            </div>
+            <button type="submit" class="loginBtn">登录</button>
+            <div class="form-footer">
+                <div>
+                    <input type="checkbox">
+                    <span>记住密码</span>
+                </div>
+                <div>
+                    <a>忘记密码？</a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+       const form =  document.getElementById('login-form')
+       form.addEventListener('submit',(e)=>{
+         const fd = new FormData(form)
+         e.preventDefault();//阻止了表单的默认提交行为——页面刷新或跳转，否则控制台输出的内容会一闪而过
+         console.log(fd)
+         for(let [key,value] of fd.entries()){
+            console.log(key,value)
+         }
+         const payload = Object.fromEntries(fd.entries())
+         console.log(payload)
+       })
+    </script>
+</body>
+
+</html>

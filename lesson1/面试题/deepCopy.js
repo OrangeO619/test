@@ -100,7 +100,7 @@ function deepClone(obj, hash = new WeakMap()) {
 
     // 遍历所有自身属性（包括 Symbol 属性）
     const keys = [...Object.keys(obj), ...Object.getOwnPropertySymbols(obj)];
-    for (let key of keys) {
+    for (let key in keys) {
         objCopy[key] = deepClone(obj[key], hash);
     }
 
