@@ -36,7 +36,7 @@
 <body>
     <div class="login">
         <h2>用户登录</h2>
-        <form class="loginForm" id="login-form" style="width: 100%;"  method="get">
+        <form class="loginForm" id="login-form" style="width: 100%;"  method="get" action="./login.html">
             <div class="form-main">
                 <input type="text" class="username" placeholder="用户名" name="username">
             </div>
@@ -67,8 +67,15 @@
          }
          const payload = Object.fromEntries(fd.entries())
          console.log(payload)
+         //架构形式：把前端资源放进后端代码里面、后端代码放在前端（next.js）
+         fetch('./login.')
        })
     </script>
 </body>
 
 </html>
+
+<!-- 
+post Method Not Allowed 405
+action为空提交表单时浏览器刷新当前页面，损耗性能
+-->
